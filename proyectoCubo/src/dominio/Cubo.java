@@ -1,6 +1,5 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+contienen las propiedades, contructures 
  */
 package dominio;
 
@@ -9,6 +8,7 @@ package dominio;
  * @author ingri
  */
 public class Cubo {
+    //declaro las propiedades de mi cubo 
     private int alto;
     private int ancho;
     private int profundo;
@@ -48,15 +48,23 @@ public class Cubo {
 
     @Override
     public String toString() {
-        return "Cubo{" + "alto=" + alto + ", ancho=" + ancho + ", profundo=" + profundo + '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Cubo{");
+        sb.append("alto=").append(alto);
+        sb.append(", ancho=").append(ancho);
+        sb.append(", profundo=").append(profundo);
+        sb.append('}');
+        return sb.toString();
     }
+
+    
     
     /*
     public int multiplicacion(int a, int b){
         return a*b;
     }
     */
-     public int calcularVolumen(int alto, int ancho, int profundo ){
-         return (alto * ancho)*profundo;
+     public int calcularVolumen(int alt, int anc, int pro ){
+         return (alt * anc)*pro;
      }
 }
